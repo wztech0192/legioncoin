@@ -13,7 +13,7 @@ export const Footer = () => {
         </Stack>
         <Divider />
         <Typography variant="body2" align="center">
-          © 2024. All Rights Reserved.
+          Copyright © 2024. WZTechs. All Rights Reserved.
         </Typography>
       </Stack>
     </SectionContainer>
