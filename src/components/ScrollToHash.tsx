@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 function ScrollToHash() {
   const { hash } = useLocation();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (hash) {
       const element = document.getElementById(hash.substring(1));
       if (element) {

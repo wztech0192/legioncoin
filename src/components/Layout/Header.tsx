@@ -22,6 +22,19 @@ const StyledImage = styled('img')({
   transition: '0.3s ease-in-out',
 });
 
+const scrollTo = (id?: string) => {
+  setTimeout(() => {
+    if (id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, 100);
+};
+
 export const Header = ({ scrolled }: { scrolled: boolean }) => {
   return (
     <StyledBoxBar bgcolor={scrolled ? 'rgba(0,0,0, 0.85)' : 'transparent'}>
@@ -43,7 +56,7 @@ export const Header = ({ scrolled }: { scrolled: boolean }) => {
           component={NavLink}
           to="/"
           onClick={() => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            scrollTo();
           }}>
           <b>HOME</b>
         </Button>
@@ -52,10 +65,7 @@ export const Header = ({ scrolled }: { scrolled: boolean }) => {
           component={NavLink}
           to="/#about"
           onClick={() => {
-            const element = document.getElementById('about');
-            if (element) {
-              element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
+            scrollTo('about');
           }}>
           <b>ABOUT</b>
         </Button>
@@ -64,7 +74,7 @@ export const Header = ({ scrolled }: { scrolled: boolean }) => {
           component={NavLink}
           to="/swap"
           onClick={() => {
-            window.scrollTo({ top: 0 });
+            scrollTo();
           }}>
           <b>SWAP</b>
         </Button>
