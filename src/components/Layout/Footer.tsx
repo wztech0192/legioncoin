@@ -12,7 +12,9 @@ export const Footer = () => {
           <Typography variant="h6">Expect us!</Typography>
         </Stack>
         <Divider />
-        <Typography variant="body2">© 2024. All Rights Reserved.</Typography>
+        <Typography variant="body2" align="center">
+          © 2024. All Rights Reserved.
+        </Typography>
       </Stack>
     </SectionContainer>
   );

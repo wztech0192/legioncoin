@@ -3,6 +3,7 @@ import { CustomThemeProvider } from './providers/CustomThemeProvider';
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { Swap } from './pages/Swap';
+import { MetadataContextProvider } from './providers/MetadataContextProvider';
 
 const router = createBrowserRouter(
   [
@@ -13,10 +14,6 @@ const router = createBrowserRouter(
           path: '/',
           element: <Home />,
         },
-        /*{
-          path: '/placeholder/:id',
-          element: <PlaceholderPage />,
-        },*/
         {
           path: '/swap',
           element: <Swap />,
@@ -32,7 +29,9 @@ const router = createBrowserRouter(
 function App() {
   return (
     <CustomThemeProvider>
-      <RouterProvider router={router} />
+      <MetadataContextProvider>
+        <RouterProvider router={router} />
+      </MetadataContextProvider>
     </CustomThemeProvider>
   );
 }

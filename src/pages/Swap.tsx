@@ -53,7 +53,7 @@ export const Swap = () => {
           alignItems="center">
           <Stack width="100%" alignItems="center" id="polyswap-root">
             <Skeleton
-              variant="rectangular"
+              variant="rounded"
               height="454px"
               animation="wave"
               sx={{
