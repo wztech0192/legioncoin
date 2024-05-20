@@ -10,11 +10,17 @@ export const Swap = () => {
         marketer: 'Legion-Coin',
         defaultSlippage: 5,
         affiliateFee: 1.5,
-        affiliateFeeRecipient: '0x05b42Ca23b82417F52a47B624A123B1037d4a03B',
+        affiliateFeeRecipient: '0x5163593B9512C57b7F5f8ebc7c12B34615cdE49E',
+        affiliateFeeRecipientByChains: {
+          8451113: '7P4CPEx9C51FegAHVy87jP7YrvuejmQEeRJ7uzjyq3rA',
+        },
         enableDarkMode: true,
         primaryColorDark: '#FEFAF6',
         chainId: 8451113,
         defaultSelectedTokenByChains: {
+          137: {
+            defaultOutputToken: '0xb7486718ea21C79BBd894126f79F504fd3625f68',
+          },
           8451113: {
             defaultOutputToken: '9hX5qubXT56uhtDWuUqiYLu5eFfrBi3YizfX4nFPmqk',
           },
