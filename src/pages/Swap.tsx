@@ -13,8 +13,11 @@ export const Swap = () => {
         affiliateFeeRecipient: '0x05b42Ca23b82417F52a47B624A123B1037d4a03B',
         enableDarkMode: true,
         primaryColorDark: '#FEFAF6',
+        chainId: 8451113,
         defaultSelectedTokenByChains: {
-          8451113: '9hX5qubXT56uhtDWuUqiYLu5eFfrBi3YizfX4nFPmqk',
+          8451113: {
+            defaultOutputToken: '9hX5qubXT56uhtDWuUqiYLu5eFfrBi3YizfX4nFPmqk',
+          },
         },
         fontFamily: '"Exo"',
         overrides: {
