@@ -45,7 +45,11 @@ export const Header = ({ scrolled }: { scrolled: boolean }) => {
           xs: 1,
           md: 2,
         }}
-        py={1}
+        py={0.5}
+        px={{
+          xs: 0.5,
+          sm: 1,
+        }}
         alignItems="center">
         <IconButton color="inherit" component={NavLink} to="/" sx={{ p: 0 }}>
           <StyledImage
