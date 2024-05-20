@@ -3,7 +3,7 @@ import { Container, Stack, Typography } from '@mui/material';
 
 export const About = () => {
   return (
-    <SectionContainer id="about" bgcolor="rgba(10,10,20,0.5)">
+    <SectionContainer id="about" bgcolor="rgba(10,10,20,0.4)">
       <Container maxWidth="md">
         <Stack
           spacing={2}

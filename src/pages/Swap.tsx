@@ -13,11 +13,15 @@ export const Swap = () => {
         affiliateFeeRecipient: '0x05b42Ca23b82417F52a47B624A123B1037d4a03B',
         enableDarkMode: true,
         primaryColorDark: '#FEFAF6',
+        defaultSelectedTokenByChains: {
+          8451113: '9hX5qubXT56uhtDWuUqiYLu5eFfrBi3YizfX4nFPmqk',
+        },
+        fontFamily: '"Exo"',
         overrides: {
           SwapCard: {
             sx: {
               backdropFilter: 'blur(15px)',
-              backgroundColor: 'rgba(0, 0, 0, 0.6)',
+              backgroundColor: 'rgba(0, 0, 0, 0.5)',
             },
           },
         },

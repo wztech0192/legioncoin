@@ -37,7 +37,7 @@ const scrollTo = (id?: string) => {
 
 export const Header = ({ scrolled }: { scrolled: boolean }) => {
   return (
-    <StyledBoxBar bgcolor={scrolled ? 'rgba(0,0,0, 0.85)' : 'transparent'}>
+    <StyledBoxBar bgcolor={scrolled ? 'rgba(0,0,0, 0.5)' : 'transparent'}>
       <Stack direction="row" spacing={2} p={1} alignItems="center">
         <IconButton color="inherit" component={NavLink} to="/" sx={{ p: 0 }}>
           <StyledImage

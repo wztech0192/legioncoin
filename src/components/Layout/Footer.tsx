@@ -3,7 +3,7 @@ import SectionContainer from '../SectionContainer';
 
 export const Footer = () => {
   return (
-    <SectionContainer p={0} bgcolor="rgba(0,0,0, 0.85)">
+    <SectionContainer p={0} bgcolor="rgba(0,0,0, 0.5)">
       <Stack spacing={1} p={1}>
         <Stack justifyContent="center" alignItems="center" p={4} spacing={4}>
           <Typography variant="h6">We do not forgive</Typography>
