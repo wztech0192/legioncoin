@@ -4,10 +4,11 @@ import {
   IconButton,
   Stack,
   styled,
+  Tooltip,
   Typography,
 } from '@mui/material';
 import { NavLink } from 'react-router-dom';
-import { Telegram } from '@mui/icons-material';
+import { Telegram, X } from '@mui/icons-material';
 import logoSrc from '@/assets/logo.png';
 
 const StyledBoxBar = styled(Box)(() => ({
@@ -38,13 +39,30 @@ const scrollTo = (id?: string) => {
 export const Header = ({ scrolled }: { scrolled: boolean }) => {
   return (
     <StyledBoxBar bgcolor={scrolled ? 'rgba(0,0,0, 0.5)' : 'transparent'}>
-      <Stack direction="row" spacing={2} p={1} alignItems="center">
+      <Stack
+        direction="row"
+        spacing={{
+          xs: 1,
+          md: 2,
+        }}
+        py={0.5}
+        px={{
+          xs: 0.5,
+          sm: 1,
+        }}
+        alignItems="center">
         <IconButton color="inherit" component={NavLink} to="/" sx={{ p: 0 }}>
           <StyledImage
             src={logoSrc}
             alt="Legion Coin"
-            width={scrolled ? '48px' : '68px'}
-            height={scrolled ? '48px' : '68px'}
+            sx={{
+              width: {
+                xs: scrolled ? '48px' : '68px',
+              },
+              height: {
+                xs: scrolled ? '48px' : '68px',
+              },
+            }}
           />
         </IconButton>
         <Typography fontWeight="bold" display={{ xs: 'none', sm: 'inline' }}>
@@ -79,32 +97,26 @@ export const Header = ({ scrolled }: { scrolled: boolean }) => {
           <b>SWAP</b>
         </Button>
         <Box flexGrow="1" />
-        <Button
-          startIcon={<Telegram />}
-          component="a"
-          target="_blank"
-          size="large"
-          sx={{
-            display: {
-              xs: 'none',
-              sm: 'inline-flex',
-            },
-          }}
-          href="https://t.me/LegionCoinSOL">
-          Telegram
-        </Button>
-        <IconButton
-          sx={{
-            display: {
-              xs: 'inline-flex',
-              sm: 'none',
-            },
-          }}
-          component="a"
-          target="_blank"
-          href="https://t.me/LegionCoinSOL">
-          <Telegram />
-        </IconButton>
+
+        <Stack direction="row">
+          <Tooltip title="Telegram">
+            <IconButton
+              component="a"
+              target="_blank"
+              href="https://t.me/LegionCoinSOL">
+              <Telegram />
+            </IconButton>
+          </Tooltip>
+
+          <Tooltip title="X">
+            <IconButton
+              component="a"
+              target="_blank"
+              href="https://x.com/LegionCoinSOL?t=VH_w2nA6WkEusIDlXUwBIw&s=09">
+              <X fontSize="small" />
+            </IconButton>
+          </Tooltip>
+        </Stack>
       </Stack>
     </StyledBoxBar>
   );
